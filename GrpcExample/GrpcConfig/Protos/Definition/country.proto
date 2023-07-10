@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcConfig.Definition";
+
+package GrpcConfig.Definition;
+
+// The request message to get all countries.
+message GetCountriesRequest {
+}
+
+// The request message to get country by id.
+message GetCountryByIdRequest {
+	int32 id = 1;
+}
+
+// The request message to get country by code.
+message GetCountryByCodeRequest {
+	string code = 1;
+}
+
+// The request message to get country by name.
+message GetCountryByNameRequest {
+	string name = 1;
+}
+
+// The response message containing the country information.
+message CountryResponse {
+	int32 id = 1;
+	string code = 2;
+	string name = 3;
+}
+
+// The response message containing the countries list.
+message CountriesResponse {
+	repeated CountryResponse countries = 1;
+}

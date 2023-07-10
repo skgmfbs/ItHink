@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcConfig.Definition";
+
+package GrpcConfig.Definition;
+
+// The request message to get all companies.
+message GetCompaniesRequest {
+}
+
+// The request message to get company by id.
+message GetCompanyByIdRequest {
+	int32 id = 1;
+}
+
+// The request message to get company by code.
+message GetCompanyByCodeRequest {
+	string code = 1;
+}
+
+// The request message to get company by name.
+message GetCompanyByNameRequest {
+	string name = 1;
+}
+
+// The response message containing the company information.
+message CompanyResponse {
+	int32 id = 1;
+	string code = 2;
+	string name = 3;
+}
+
+// The response message containing the companies list.
+message CompaniesResponse {
+	repeated CompanyResponse companies = 1;
+}

@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcConfig.Services";
+
+package GrpcConfig.Services;
+
+import "Protos/Definition/company.proto";
+import "Protos/Definition/country.proto";
+
+// The company service definition.
+service CompanyService {
+	// get all companies.
+	rpc GetCompanies (GrpcConfig.Definition.GetCompaniesRequest) returns (stream GrpcConfig.Definition.CompanyResponse);
+	// get company by id.
+	rpc GetCompanyById (GrpcConfig.Definition.GetCompanyByIdRequest) returns (GrpcConfig.Definition.CompanyResponse);
+	// get company by code.
+	rpc GetCompanyByCode (stream GrpcConfig.Definition.GetCompanyByCodeRequest) returns (GrpcConfig.Definition.CompaniesResponse);
+	// get company by name.
+	rpc GetCompanyByName (stream GrpcConfig.Definition.GetCompanyByNameRequest) returns (stream GrpcConfig.Definition.CompanyResponse);
+}
+
+// The country service definition.
+service CountryService {
+	// get all countries.
+	rpc GetCountries (GrpcConfig.Definition.GetCountriesRequest) returns (stream GrpcConfig.Definition.CountryResponse);
+	// get country by id.
+	rpc GetCountryById (GrpcConfig.Definition.GetCountryByIdRequest) returns (GrpcConfig.Definition.CountryResponse);
+	// get country by code.
+	rpc GetCountryByCode (stream GrpcConfig.Definition.GetCountryByCodeRequest) returns (GrpcConfig.Definition.CountriesResponse);
+	// get country by name.
+	rpc GetCountryByName (stream GrpcConfig.Definition.GetCountryByNameRequest) returns (stream GrpcConfig.Definition.CountryResponse);
+}
