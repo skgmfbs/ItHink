@@ -1,0 +1,19 @@
+version: "0.0.1"
+services:
+  mq:
+    image: icr.io/ibm-messaging/mq
+    container_name: ibm-mq
+    environment:
+      - LICENSE=accept
+      - MQ_QMGR_NAME=TESTQM
+    volumes:
+      - "mqmdata:/mnt/mqm"
+    networks:
+      - pubsub
+    ports:
+      - "9445:9443"
+      - "1419:1414"
+volumes:
+  mqmdata:
+networks:
+  pubsub:
