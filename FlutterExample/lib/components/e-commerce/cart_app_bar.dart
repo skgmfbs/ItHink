@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:badges/badges.dart' as badges;
 
-class HomeAppBar extends StatelessWidget {
-  const HomeAppBar({super.key});
+class CartAppBar extends StatelessWidget {
+  const CartAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,15 +11,21 @@ class HomeAppBar extends StatelessWidget {
       padding: const EdgeInsets.all(25),
       child: Row(
         children: [
-          Icon(
-            Icons.sort,
-            size: 30,
-            color: theme.colorScheme.primary,
+          InkWell(
+            onTap: () {
+              // goes back to previous screen
+              Navigator.pop(context);
+            },
+            child: Icon(
+              Icons.arrow_back,
+              size: 30,
+              color: theme.colorScheme.primary,
+            ),
           ),
           Padding(
             padding: const EdgeInsets.only(left: 20),
             child: Text(
-              "Soccer shoes shop",
+              "Cart",
               style: TextStyle(
                 fontSize: 23,
                 fontWeight: FontWeight.bold,
@@ -29,23 +34,10 @@ class HomeAppBar extends StatelessWidget {
             ),
           ),
           const Spacer(),
-          badges.Badge(
-            badgeStyle: const badges.BadgeStyle(
-                badgeColor: Colors.red, padding: EdgeInsets.all(7)),
-            badgeContent: Text(
-              "3",
-              style: TextStyle(color: theme.colorScheme.background),
-            ),
-            child: InkWell(
-              onTap: (){
-                Navigator.pushNamed(context, "cartPage");
-              },
-              child: Icon(
-                Icons.shopping_bag_outlined,
-                size: 30,
-                color: theme.colorScheme.primary,
-              ),
-            ),
+          Icon(
+            Icons.more_vert,
+            size: 30,
+            color: theme.colorScheme.primary,
           )
         ],
       ),

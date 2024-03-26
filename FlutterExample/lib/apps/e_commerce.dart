@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_example/screens/e-commerce/cart.dart';
 
 import '../screens/e-commerce/home.dart';
 
@@ -20,7 +21,10 @@ class ECommerceApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      routes: {"/": (context) => const HomePage()},
+      routes: {
+        "/": (context) => const HomePage(),
+        "cartPage": (context) => const CartPage()
+      },
     );
   }
 }

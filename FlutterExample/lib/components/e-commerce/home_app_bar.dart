@@ -8,7 +8,7 @@ class HomeAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return Container(
-      color: Colors.white,
+      color: theme.colorScheme.background,
       padding: const EdgeInsets.all(25),
       child: Row(
         children: [
@@ -32,12 +32,14 @@ class HomeAppBar extends StatelessWidget {
           badges.Badge(
             badgeStyle: const badges.BadgeStyle(
                 badgeColor: Colors.red, padding: EdgeInsets.all(7)),
-            badgeContent: const Text(
+            badgeContent: Text(
               "3",
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: theme.colorScheme.background),
             ),
             child: InkWell(
-              // onTap: (){},
+              onTap: (){
+                Navigator.pushNamed(context, "cartPage");
+              },
               child: Icon(
                 Icons.shopping_bag_outlined,
                 size: 30,

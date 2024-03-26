@@ -2,13 +2,13 @@ import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import '../components/big_card.dart';
 
-class WordRandomWidget extends StatelessWidget {
+class WordRandomPage extends StatelessWidget {
   final WordPair word;
   final VoidCallback? onFavoriteButtonClicked;
   final VoidCallback? onNextButtonClicked;
   final bool isAdded;
 
-  const WordRandomWidget(
+  const WordRandomPage(
       {super.key,
       required this.word,
       required this.onFavoriteButtonClicked,

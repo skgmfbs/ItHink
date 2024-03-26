@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class LoginWidget extends StatelessWidget {
-  LoginWidget({super.key});
+class LoginPage extends StatelessWidget {
+  LoginPage({super.key});
 
   // var usernameController = TextEditingController();
   // var passwordController = TextEditingController();
