@@ -1,0 +1,22 @@
+Cause from Udemy "k6-load-testing-performance-testing"
+//Grafana Cloud k6
+https://grafana.com/products/cloud/k6/
+$k6 login cloud [--token {https://xxxx.grafana.net/a/k6-app/settings/api-token}]
+
+https://k6.io/docs/using-k6/environment-variables/
+https://k6.io/docs/examples/data-parameterization/#from-a-json-file
+https://k6.io/docs/examples/data-parameterization/#from-a-csv-file
+https://k6.io/docs/javascript-api/jslib/utils/randomitem/
+https://k6.io/docs/javascript-api/jslib/utils/randomintbetween/
+https://k6.io/docs/javascript-api/jslib/utils/randomstring/
+https://k6.io/docs/using-k6/k6-options/reference/
+https://k6.io/docs/using-k6/k6-options/reference/#insecure-skip-tls-verify
+https://k6.io/docs/using-k6/k6-options/how-to/
+https://www.jenkins.io/doc/book/installing/
+https://k6.io/docs/get-started/installation/
+https://github.com/vdespa/k6-sample-tests
+https://www.youtube.com/watch?v=Jav4vbUrqII
+https://k6.io/docs/using-k6-browser/
+https://www.youtube.com/c/k6test
+https://grafana.com/docs/k6/latest/
+https://community.grafana.com/
